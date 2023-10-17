@@ -1,0 +1,29 @@
+.list-item {
+  list-style-type: none;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.active-category-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Roboto';
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: maroon;
+  border-bottom: 1px solid maroon;
+}
+
+.category-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Roboto';
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

@@ -1,9 +1,3 @@
-.list-item {
-  list-style-type: none;
-  margin-right: 20px;
-  margin-left: 20px;
-}
-
 .active-category-button {
   background-color: transparent;
   border: none;
@@ -15,6 +9,8 @@
   margin-bottom: 15px;
   color: maroon;
   border-bottom: 1px solid maroon;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .category-button {
@@ -26,4 +22,6 @@
   font-size: 20px;
   margin-top: 15px;
   margin-bottom: 15px;
+  margin-right: 20px;
+  margin-left: 20px;
 }

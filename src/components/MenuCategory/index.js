@@ -7,15 +7,13 @@ const MenuCategory = props => {
     onMenuItemClick(id)
   }
   return (
-    <li className="list-item">
-      <button
-        type="button"
-        className={isActive ? 'active-category-button' : 'category-button'}
-        onClick={onCategoryClick}
-      >
-        {value}
-      </button>
-    </li>
+    <button
+      type="button"
+      className={isActive ? 'active-category-button' : 'category-button'}
+      onClick={onCategoryClick}
+    >
+      {value}
+    </button>
   )
 }
 

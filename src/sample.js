@@ -37,11 +37,7 @@ class RestaurantPage extends Component {
       id: eachItem.menu_category,
       value: eachItem.menu_category,
     }))
-
-    this.setState({
-      activeTab: menuList[0].id,
-      categoryList: menuList,
-    })
+    this.setState({activeTab: menuList[0].id})
 
     const result = data[0].table_menu_list.map(item =>
       item.category_dishes.map(eachMenu => ({
@@ -68,6 +64,7 @@ class RestaurantPage extends Component {
 
     console.log(updatedData)
     this.setState({
+      categoryList: menuList,
       categoryItem: updatedData,
       currentApiStatus: apiStatus.success,
     })

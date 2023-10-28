@@ -18,6 +18,7 @@
   padding: 2px 5px 2px 5px;
   font-family: 'Roboto';
   border-radius: 50%;
+  top: 3px;
 }
 
 .navbar {
@@ -53,9 +54,11 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid skyblue;
+  overflow: auto;
 }
 
 .item-container {
   margin: 0px;
   padding: 0px;
 }
+

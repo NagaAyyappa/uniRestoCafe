@@ -58,7 +58,7 @@ const MenuItems = props => {
             <p className="availability">Not available</p>
           )}
           {addonCat.length > 0 && (
-            <p className="customization">Customization available</p>
+            <p className="customization">Customizations available</p>
           )}
         </div>
       </div>

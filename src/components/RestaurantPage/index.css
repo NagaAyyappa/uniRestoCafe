@@ -6,22 +6,7 @@
 
 .cart-container {
   display: flex;
-<<<<<<< HEAD
   align-items: center;
-=======
-}
-
-.count {
-  position: absolute;
-  right: 35px;
-  align-self: flex-start;
-  background-color: red;
-  color: white;
-  padding: 2px 5px 2px 5px;
-  font-family: 'Roboto';
-  border-radius: 50%;
-  top: 3px;
->>>>>>> 8503f43adcae8abb4e7401879887123c680cc27e
 }
 
 .navbar {
@@ -64,4 +49,3 @@
   margin: 0px;
   padding: 0px;
 }
-

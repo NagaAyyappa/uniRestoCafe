@@ -30,7 +30,11 @@ const Header = props => {
               </button>
               <Link to="/cart" className="nav-link-item">
                 <button type="button" className="cart-icon-button">
-                  <AiOutlineShoppingCart className="cart" />
+                  <img
+                    src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-cart-icon.png"
+                    alt="nav cart"
+                    className="cart"
+                  />
                 </button>
               </Link>
               <p className="count">{cartList.length}</p>

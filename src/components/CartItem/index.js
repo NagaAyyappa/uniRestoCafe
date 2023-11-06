@@ -11,7 +11,14 @@ const CartItem = props => (
         decrementCartItemQuantity,
       } = value
       const {cartItemDetails} = props
-      const {dishId, dishName, quantity, dishPrice, dishImage} = cartItemDetails
+      const {
+        dishId,
+        dishName,
+        quantity,
+        dishPrice,
+        dishImage,
+        dishCurrency,
+      } = cartItemDetails
       const onClickDecrement = () => {
         decrementCartItemQuantity(dishId)
       }
@@ -44,7 +51,9 @@ const CartItem = props => (
               +
             </button>
           </div>
-          <p className="cart-total-price">Rs {totalPrice}/-</p>
+          <p className="cart-total-price">
+            {dishCurrency} {totalPrice}
+          </p>
           <button
             className="remove-btn"
             type="button"

@@ -5,7 +5,6 @@ import MenuItems from '../MenuItems'
 import './index.css'
 import Header from '../Header'
 
-<<<<<<< HEAD
 const dishesData = [
   {
     category: 'Salads and Soup',
@@ -657,8 +656,6 @@ const categoryItems = [
   },
 ]
 
-=======
->>>>>>> 8503f43adcae8abb4e7401879887123c680cc27e
 const apiStatus = {
   initial: 'INITIAL',
   loading: 'LOADING',
@@ -683,13 +680,9 @@ class RestaurantPage extends Component {
   }
 
   getData = async () => {
-<<<<<<< HEAD
     // this.setState({currentApiStatus: apiStatus.loading})
     const url = 'https://run.mocky.io/v3/77a7e71b-804a-4fbd-822c-3e365d3482cc'
-    const options = {
-      method: 'GET',
-    }
-    const response = await fetch(url, options)
+    const response = await fetch(url)
     if (response.ok) {
       const data = await response.json()
       const menuList = data[0].table_menu_list.map(eachItem => ({
@@ -719,59 +712,14 @@ class RestaurantPage extends Component {
       result.forEach(element => {
         updatedData = [...updatedData, ...element]
       })
-      console.log(updatedData)
 
       /* this.setState({
-        activeTab: menuList[0].id,
-        categoryList: menuList,
-        categoryItem: updatedData,
-        currentApiStatus: apiStatus.success,
-      }) */
+              activeTab: menuList[0].id,
+              categoryList: menuList,
+              categoryItem: updatedData,
+              currentApiStatus: apiStatus.success,
+            }) */
     }
-=======
-    this.setState({currentApiStatus: apiStatus.loading})
-    const url = 'https://run.mocky.io/v3/77a7e71b-804a-4fbd-822c-3e365d3482cc'
-    const response = await fetch(url)
-    const data = await response.json()
-    const menuList = data[0].table_menu_list.map(eachItem => ({
-      id: eachItem.menu_category,
-      value: eachItem.menu_category,
-    }))
-
-    this.setState({
-      activeTab: menuList[0].id,
-      categoryList: menuList,
-    })
-
-    const result = data[0].table_menu_list.map(item =>
-      item.category_dishes.map(eachMenu => ({
-        category: item.menu_category,
-        addonCat: eachMenu.addonCat,
-        dishAvailability: eachMenu.dish_Availability,
-        dishType: eachMenu.dish_Type,
-        dishCalories: eachMenu.dish_calories,
-        dishCurrency: eachMenu.dish_currency,
-        dishDescription: eachMenu.dish_description,
-        dishId: eachMenu.dish_id,
-        dishImage: eachMenu.dish_image,
-        dishName: eachMenu.dish_name,
-        dishPrice: eachMenu.dish_price,
-        quantity: 0,
-      })),
-    )
-
-    let updatedData = []
-
-    result.forEach(element => {
-      updatedData = [...updatedData, ...element]
-    })
-
-    console.log(updatedData)
-    this.setState({
-      categoryItem: updatedData,
-      currentApiStatus: apiStatus.success,
-    })
->>>>>>> 8503f43adcae8abb4e7401879887123c680cc27e
   }
 
   onQuantityIncrease = id => {
@@ -853,18 +801,7 @@ class RestaurantPage extends Component {
     const {currentApiStatus} = this.state
     return (
       <div className="container">
-<<<<<<< HEAD
         {currentApiStatus === apiStatus.loading && <h1>UNI Resto Cafe</h1>}
-=======
-        <nav className="navbar">
-          <h1>UNI Resto Cafe</h1>
-          <div className="cart-container">
-            <p className="para">My Orders</p>
-            <AiOutlineShoppingCart className="cart" />
-            <p className="count">{cartCount}</p>
-          </div>
-        </nav>
->>>>>>> 8503f43adcae8abb4e7401879887123c680cc27e
         {currentApiStatus === apiStatus.loading && this.renderLoadingView()}
         {currentApiStatus === apiStatus.success && this.renderSuccessView()}
       </div>

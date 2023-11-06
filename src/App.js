@@ -98,9 +98,9 @@ class App extends Component {
         }}
       >
         <Switch>
-          <ProtectedRoute exact path="/cart" component={Cart} />
           <Route exact path="/login" component={LoginForm} />
           <ProtectedRoute exact path="/" component={RestaurantPage} />
+          <ProtectedRoute exact path="/cart" component={Cart} />
         </Switch>
       </CartContext.Provider>
     )
